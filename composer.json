@@ -1,0 +1,19 @@
+{
+    "name": "littlegiant/sliver",
+    "description": "",
+    "license": "MIT",
+    "keywords": ["silverstripe", "sliver", "psysh", "shell", "cli", "terminal", "command line"],
+    "authors": [
+        {
+            "name": "Sam Walsh",
+            "email": "hello@samwalsh.co.nz"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "psy/psysh": "^0.7.2"
+    },
+    "bin": [
+        "sliver"
+    ]
+}
