@@ -5,7 +5,7 @@
 Inspired by Laravel's [artisan tinker](https://github.com/laravel/framework/blob/5.0/src/Illuminate/Foundation/Console/TinkerCommand.php), and powered by [psysh](http://psysh.org/), *Sliver* allows you to play with your SilverStripe code during runtime with the added debugging functionality from psysh.
 
 ## Installation
-Simply install the *Sliver* cli globally by running the following command:
+Install the *Sliver* cli globally by running the following command:
 
 ```bash
 $ composer global require littlegiant/sliver
