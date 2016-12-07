@@ -1,8 +1,41 @@
+#!/usr/bin/env php
 <?php
+set_error_handler(function ($severity, $message, $file, $line) {
+    if ($severity & error_reporting()) {
+        throw new ErrorException($message, 0, $severity, $file, $line);
+    }
+});
 
-require_once './vendor/autoload.php';
+// installed via composer?
+if (file_exists($a = __DIR__.'/../../autoload.php')) {
+    require_once $a;
+} else {
+    require_once __DIR__.'/vendor/autoload.php';
+}
 
-require_once dirname(__FILE__) . '/boot.php';
+/**
+ * Include SilverStripe's core code
+ */
+require_once(getcwd() . "/framework/core/Core.php");
+
+global $databaseConfig;
+
+// We don't have a session in cli-script, but this prevents errors
+$_SESSION = null;
+
+require_once(getcwd() . "/framework/model/DB.php");
+
+// Connect to database
+if (!isset($databaseConfig) || !isset($databaseConfig['database']) || !$databaseConfig['database']) {
+    echo "\nPlease configure your database connection details.";
+    exit(1);
+}
+DB::connect($databaseConfig);
+
+Controller::create()->pushCurrent();
+
+// Direct away - this is the "main" function, that hands control to the apporopriate controller
+DataModel::set_inst(new DataModel());
 
 $shell = new \Psy\Shell();
 $shell->run();
