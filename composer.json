@@ -1,6 +1,6 @@
 {
     "name": "littlegiant/sliver",
-    "description": "",
+    "description": "Tinker with a sliver of your code with an interactive debugger and REPL for SilverStripe, powered by psysh.",
     "license": "MIT",
     "keywords": ["silverstripe", "sliver", "psysh", "shell", "cli", "terminal", "command line"],
     "authors": [
@@ -9,8 +9,7 @@
             "email": "hello@samwalsh.co.nz"
         }
     ],
-    "require": {},
-    "require-dev": {
+    "require": {
         "psy/psysh": "^0.7.2"
     },
     "bin": [
