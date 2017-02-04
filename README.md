@@ -2,7 +2,7 @@
 
 **Tinker with a sliver of your code with an interactive debugger and REPL for SilverStripe, powered by psysh.**
 
-Inspired by Laravel's [artisan tinker](https://github.com/laravel/framework/blob/5.0/src/Illuminate/Foundation/Console/TinkerCommand.php), and powered by [psysh](http://psysh.org/), *Sliver* allows you to play with your [SilverStripe](https://www.silverstripe.org) code during runtime with the added debugging functionality from psysh.
+Inspired by Laravel's [artisan tinker](https://github.com/laravel/tinker), and powered by [psysh](http://psysh.org/), *Sliver* allows you to play with your [SilverStripe](https://www.silverstripe.org) code during runtime with the added debugging functionality from psysh.
 
 ## Installation
 Install the *Sliver* cli globally by running the following command:
